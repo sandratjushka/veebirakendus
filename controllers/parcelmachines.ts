@@ -3,9 +3,9 @@ import axios from "axios";
 
 const router: Router = Router();
 
-router.get("/parcelmachines", async (req: Request, res: Response) => {
+router.get("/nord-pool-price", async (req: Request, res: Response) => {
   const response = await axios.get(
-    "https://www.omniva.ee/locations.json"
+    "https://dashboard.elering.ee/api/nps/price"
   );
   res.json(response.data);
 });
